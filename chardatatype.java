@@ -8,3 +8,7 @@ class char1
         System.out.println("sum= "+(a+b));
     }
 }
+
+//PS C:\diya\java> javac chardatatype.java
+//PS C:\diya\java> java char1
+//sum= 162
