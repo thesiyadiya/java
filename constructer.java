@@ -13,3 +13,8 @@ class spr1
         System.out.println("THIS IS DEMO");
     }
 }
+
+
+//PS C:\diya\java> javac constructer.java
+//PS C:\diya\java> java char1
+//sum= 162
