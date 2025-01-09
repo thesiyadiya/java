@@ -9,3 +9,8 @@ class spr
         System.out.println("THIS IS DEMO");
     }
 }
+
+
+//PS C:\diya\java> javac staticmethod.java
+//PS C:\diya\java> java spr
+//THIS IS DEMO
