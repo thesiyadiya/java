@@ -1,12 +1,8 @@
-class test
+ class test
 {
-    public static void main(String s[])
+    public static void main(String a[])
     {
-        System.out.print("This is Demo");
+        String s=a[0];
+        System.out.print("Name="+s);
     }
 }
-
-
-//PS C:\diya\java> javac test.java
-//PS C:\diya\java> java test
-//This is DemoPS C:\diya\java>
