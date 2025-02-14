@@ -1,16 +1,16 @@
-class spr
+class staticmethod
 {
-    public static void main(String s[])
+    public static void main(String a[])
     {
-        new spr().demo();
+        home();
     }
-    public void demo()
+    public static void home()
     {
-        System.out.println("THIS IS DEMO");
+        System.out.println("This is demo");
     }
 }
 
-
-//PS C:\diya\java> javac staticmethod.java
-//PS C:\diya\java> java spr
-//THIS IS DEMO
+/* 
+PS C:\diya\java> javac staticmethod.java
+PS C:\diya\java> java staticmethod
+This is demo */
