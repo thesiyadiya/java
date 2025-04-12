@@ -1,0 +1,52 @@
+import java.io.File;
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+import javafx.stage.Stage;
+public class Javafx_Video extends Application {
+   @Override
+   public void start(Stage stage) {
+      // Passing the video file to the File object
+      File videofile = new File("sampleTP.mp4");
+      // creating a Media object from the File Object
+      Media videomedia = new Media(videofile.toURI().toString()); 
+      // creating a MediaPlayer object from the Media Object
+      MediaPlayer mdplayer = new MediaPlayer(videomedia);
+      // creating a MediaView object from the MediaPlayer Object
+      MediaView viewmedia = new MediaView(mdplayer);
+      //setting the fit height and width of the media view 
+      viewmedia.setFitHeight(455); 
+      viewmedia.setFitWidth(500); 
+      // creating video controls using the buttons
+      Button pause = new Button("Pause");
+      Button resume = new Button("Resume");
+      // creating an HBox 
+      HBox box = new HBox(20, pause, resume);
+      box.setAlignment(Pos.CENTER);
+      // function to handle play and pause buttons
+      pause.setOnAction(act -> mdplayer.pause());
+      resume.setOnAction(act -> mdplayer.play());
+      // creating the root
+      VBox root = new VBox(20);
+      root.setAlignment(Pos.CENTER);
+      root.getChildren().addAll(viewmedia, box);
+      Scene scene = new Scene(root, 400, 400);
+      stage.setScene(scene);
+      stage.setTitle("Example of Video in JavaFX");
+      stage.show();   
+   }
+   public static void main(String[] args) {
+      launch(args);
+   }
+}
+
+
+
+javac --module-path %PATH_TO_FX% --add-modules javafx.controls,javafx.media Javafx_Video.java
+java --module-path %PATH_TO_FX% --add-modules javafx.controls,javafx.media Javafx_Video
